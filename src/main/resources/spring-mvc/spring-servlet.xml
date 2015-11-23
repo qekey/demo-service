@@ -26,21 +26,21 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 
     <!-- 自动扫描这个包下的所有文件Controller注解 -->
     <context:component-scan base-package="dev.xwolf.demo.service"/>
-     <mvc:annotation-driven/>
-  <bean
+    
+      <bean
             class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <property name="messageConverters">
             <util:list id="beanList">
                 <ref bean="mappingJacksonHttpMessageConverter"/>
             </util:list>
         </property>
-    </bean>
+    </bean> 
 <!--     <bean id="validator"
           class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"
           p:validationMessageSource-ref="messageSource"></bean> -->
           
           
-     <bean id="mappingJacksonHttpMessageConverter"
+   <bean id="mappingJacksonHttpMessageConverter"
           class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
         <property name="supportedMediaTypes">
             <list>
@@ -48,7 +48,8 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
                 <value>application/json;charset=UTF-8</value>
             </list>
         </property>
-    </bean>
+    </bean> 
+    
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">

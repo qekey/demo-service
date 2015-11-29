@@ -80,6 +80,13 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
         <property name="maxUploadSize" value="104857600"/>
         <property name="maxInMemorySize" value="4096"/>
     </bean>
+    
+    
+
+  
+        
+    
+    <!--     <mvc:resources location="/js/angular/" mapping="/js/angular/**"/>   -->
 
 
     
